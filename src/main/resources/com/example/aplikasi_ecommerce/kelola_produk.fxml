@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<SplitPane dividerPositions="0.4" prefWidth="900.0" prefHeight="600.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplikasi_ecommerce.kelolaprodukcontroller">
+    <items>
+        <VBox spacing="10.0">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="Form Entri Manajemen Produk" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+            <Label text="Nama Produk:"/>
+            <TextField fx:id="txtNama" promptText="Nama Produk..."/>
+
+            <HBox spacing="10.0">
+                <VBox HBox.hgrow="ALWAYS" spacing="5.0">
+                    <Label text="Harga:"/>
+                    <TextField fx:id="txtHarga" promptText="Format: 15000"/>
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS" spacing="5.0">
+                    <Label text="Stok:"/>
+                    <TextField fx:id="txtStok" promptText="Contoh: 50"/>
+                </VBox>
+            </HBox>
+
+            <HBox spacing="10.0">
+                <VBox HBox.hgrow="ALWAYS" spacing="5.0">
+                    <Label text="ID Kategori:"/>
+                    <TextField fx:id="txtKategori" promptText="ID Kategori DB"/>
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS" spacing="5.0">
+                    <Label text="ID Toko:"/>
+                    <TextField fx:id="txtToko" promptText="ID Toko DB"/>
+                </VBox>
+            </HBox>
+
+            <Label text="Deskripsi Produk:"/>
+            <TextArea fx:id="txtDesk" prefHeight="100.0" wrapText="true"/>
+
+            <Separator/>
+
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                </rowConstraints>
+                <children>
+                    <Button text="Tambah (Create)" onAction="#aksiTambah" maxWidth="-Infinity" style="-fx-background-color: #28a745; -fx-text-fill: white;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Button text="Ubah (Update)" onAction="#aksiUbah" maxWidth="-Infinity" style="-fx-background-color: #007bff; -fx-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Button text="Hapus (Delete)" onAction="#aksiHapus" maxWidth="-Infinity" style="-fx-background-color: #dc3545; -fx-text-fill: white;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Button text="Clear Form" onAction="#aksiBersihkan" maxWidth="-Infinity" style="-fx-background-color: #6c757d; -fx-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                </children>
+            </GridPane>
+        </VBox>
+
+        <VBox spacing="10.0">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="Daftar Produk Terdaftar" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <TableView fx:id="tableProduk" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID/Index" prefWidth="70"/>
+                    <TableColumn fx:id="colNama" text="Nama Produk" prefWidth="180"/>
+                    <TableColumn fx:id="colHarga" text="Harga" prefWidth="100"/>
+                    <TableColumn fx:id="colStok" text="Stok" prefWidth="60"/>
+                    <TableColumn fx:id="colDesk" text="Deskripsi" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </items>
+</SplitPane>

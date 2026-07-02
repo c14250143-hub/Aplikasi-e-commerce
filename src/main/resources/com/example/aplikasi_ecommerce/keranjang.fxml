@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="500.0" prefWidth="600.0" spacing="15.0" style="-fx-padding: 20; -fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplikasi_ecommerce.keranjangcontroller">
+    <children>
+        <Label text="Keranjang Belanja Anda">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="tabelKeranjang" prefHeight="330.0" prefWidth="560.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colNama" prefWidth="200.0" text="Nama Produk" />
+                <TableColumn fx:id="colHarga" prefWidth="120.0" text="Harga Satuan" />
+                <TableColumn fx:id="colJumlah" prefWidth="80.0" text="Jumlah" />
+                <TableColumn fx:id="colSubtotal" prefWidth="140.0" text="Subtotal" />
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15.0">
+            <children>
+                <Label text="Total Pembayaran:">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelTotal" text="Rp 0" textFill="#ff5722">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15.0">
+            <children>
+                <Button fx:id="btnKembali" onAction="#handleKembali" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-cursor: hand;" text="Kembali ke Katalog" />
+                <Button fx:id="btnHapus" onAction="#handleHapusBarang" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-cursor: hand;" text="Hapus Barang" />
+                <Button fx:id="btnCheckout" onAction="#handleCheckout" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-cursor: hand;" text="Checkout Sekarang" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

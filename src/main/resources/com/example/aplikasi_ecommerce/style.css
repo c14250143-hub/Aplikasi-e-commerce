@@ -1,0 +1,75 @@
+
+.root {
+    -fx-background-color: #f8f9fa;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.button {
+    -fx-background-color: #0d6efd;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15 8 15;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #0b5ed7;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 8 15 8 15;
+    -fx-prompt-text-fill: #adb5bd;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+    -fx-text-fill: #495057;
+    -fx-font-size: 14px;
+}
+.list-cell:selected {
+    -fx-background-color: #e9ecef;
+    -fx-text-fill: #0d6efd;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.root {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Mempercantik kotak pencarian */
+.search-box {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #ced4da;
+    -fx-padding: 8 15 8 15;
+}
+
+/* Mempercantik ListView Kategori */
+.category-list {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.category-list .list-cell {
+    -fx-padding: 12 15 12 15;
+    -fx-background-color: transparent;
+    -fx-text-fill: #495057;
+}
+
+.category-list .list-cell:selected {
+    -fx-background-color: #e7f1ff;
+    -fx-text-fill: #0d6efd;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aplikasi_ecommerce.admindashboardcontroller">
+    <children>
+        <Label text="Dashboard Admin E-Shop" textFill="#0d6efd">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+        <Label text="Pilih menu operasional di bawah ini:" textFill="#6c757d">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+        <HBox alignment="CENTER" spacing="20.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#bukaorderstatus" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #fd7e14; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 8;" text="🚚 Kelola Pesanan">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#bukaKelolaProduk" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 8;" text="📦 Kelola Master Produk">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#bukaReportInsight" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #17a2b8; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 8;" text="📊 Laporan Business Insight">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </HBox>
+
+        <Button mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-cursor: hand; -fx-background-radius: 5;" text="Keluar (Logout)">
+            <VBox.margin>
+                <Insets top="40.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+</VBox>
